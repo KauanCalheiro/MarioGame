@@ -1,0 +1,93 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;    
+}
+
+.elements{
+    width:100vw;
+    display: flex;
+    flex-direction: column;
+}
+
+.game-board {
+    width:100vw;
+    top: 0;
+    height: 92%;
+    margin: 0 auto;
+    position: absolute;
+    overflow: hidden;
+    background: linear-gradient(#87ceeb, #e0f6ff);
+}
+
+.pipe {
+    position: absolute;
+    bottom: 0;
+    width: 80px;
+    right: 360px;
+}
+
+.mario {
+    position: absolute;
+    bottom: 0;
+    width: 150px;
+}
+
+.cloud {
+    position: absolute;
+    width: 550px;
+    animation: clouds-animation 10s infinite linear;
+}
+
+.pipe-animation{
+    animation: pipe-animation 2s infinite linear;
+}
+
+.mario-jump {
+    animation: mario-jump 0.5s ease-in-out;
+}
+
+.ground{
+    position: absolute;
+    bottom: 0;
+    height: 8%;
+    width: 100vw;
+}
+
+@keyframes pipe-animation {
+    from{
+        right: -80px;
+    }
+
+    to{
+        right: 100%;
+    }
+}
+
+@keyframes mario-jump {
+    0%{
+        bottom: 0;
+    }
+
+    35%{
+        bottom: 180px;
+    }
+
+    65%{
+        bottom: 180px;
+    }
+
+    100%{
+        bottom: 0;
+    }
+}
+
+@keyframes clouds-animation {
+    from{
+        right: -550px;
+    }
+
+    to{
+        right: 100%;
+    }
+}
